@@ -10,7 +10,7 @@ Edit the associated Security Group to allow all inbound traffic to ease the exer
 
 Connect to instance with SSH
 
-    ssh -i "<pem-filename>.pem" ubuntu@ec2-XX-XXX-XXX-XXX.eu-west-3.compute.amazonaws.com
+    ssh -i "nicolas.benhamou.pe.pem" ubuntu@ec2-XX-XXX-XXX-XXX.eu-west-3.compute.amazonaws.com
 
 Install kubectl
 
@@ -85,7 +85,7 @@ Start Kubernetes Dashboard
 
 Open another terminal an create SSH tunnel
 
-    ssh -i [private key.pem] -L [local port]:localhost:[remote port of minikube dashboard] ubuntu@[public ip]
+    ssh -i "nicolas.benhamou.pe.pem" -L 8081:localhost:[remote port of minikube dashboard] ubuntu@[ec2 public ip]
     
 Browse from your local machine
 
@@ -103,6 +103,6 @@ Install with HELM
 
 Create Ops Manager secret (to be used for sign-in)
 
-    kubectl create secret generic ops-manager-admin-secret --from-literal=Username="[username@someplace.com]"  --from-literal=Password="[password]" --from-literal=FirstName="[firstname]" --from-literal=LastName="[lastname]" -n mongodb
+    kubectl create secret generic ops-manager-admin-secret --from-literal=Username="nicolas.benhamou@mongodb.com"  --from-literal=Password="Hercules.34" --from-literal=FirstName="nicolas" --from-literal=LastName="benhamou" -n mongodb
     
     
