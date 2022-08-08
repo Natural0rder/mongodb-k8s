@@ -129,8 +129,8 @@ Get and browse Ops Manager portal
 Create a new Organization : [My Org. Name]
 
 Create an API Key for the new Organization:
-    Organization Owner role (save private and public keys)
-    Add K8S operator POD IP in the white list
+- Organization Owner role (save private and public keys)
+- Add K8S operator POD IP in the white list
 
 4. Deploy a MongoDB Replica Set
 
