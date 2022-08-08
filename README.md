@@ -107,8 +107,8 @@ Create Ops Manager Kubernetes Secret (to be used for sign-in to the Ops Manager 
 
 Create file ops-manager.yaml and copy content
 
-   touch ops-manager.yaml
-   vi ops-manager.yaml
+    touch ops-manager.yaml
+    vi ops-manager.yaml
    
 Deploy Ops Manager Kubernetes Object
 
