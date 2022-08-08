@@ -114,3 +114,7 @@ Deploy Ops Manager Kubernetes Object
 
     kubectl apply -f ops-manager.yaml
     
+Monitor provisioning
+
+    kubectl get om -n mongodb
+    kubectl get om -o yaml -w
