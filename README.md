@@ -39,7 +39,7 @@ Install Minikube
     sudo mv ./cri-dockerd /usr/local/bin/ 
     cri-dockerd --help
     
-    wget https://raw.githubusercontent.com/Mirantis/cri-dockerd/master/packaging/systemd/cri-docker.service0
+    wget https://raw.githubusercontent.com/Mirantis/cri-dockerd/master/packaging/systemd/cri-docker.service
     wget https://raw.githubusercontent.com/Mirantis/cri-dockerd/master/packaging/systemd/cri-docker.socket
     sudo mv cri-docker.socket cri-docker.service /etc/systemd/system/
     sudo sed -i -e 's,/usr/bin/cri-dockerd,/usr/local/bin/cri-dockerd,' /etc/systemd/system/cri-docker.service
