@@ -93,6 +93,8 @@ Browse from your local machine
     
 2. Deploy MongoDB Kubernetes Enterprise Operator
 
+Install with HELM
+
     helm repo add mongodb https://mongodb.github.io/helm-charts
     helm install enterprise-operator mongodb/enterprise-operator --namespace mongodb --create-namespace
     kubectl config set-context $(kubectl config current-context) --namespace=mongodb
