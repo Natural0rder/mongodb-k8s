@@ -147,3 +147,21 @@ Create replica-set.yaml and copy content
 Deploy the replica set
 
     kubectl apply -f replica-set.yaml -n mongodb
+    
+5. Apply an upgrade
+
+Update replica-set.yaml with a 5 nodes replica set
+
+    apiVersion: mongodb.com/v1
+kind: MongoDB
+metadata:
+  name: my-project
+  namespace: mongodb
+spec:
+  members: 5
+  version: "5.0.5-ent"
+  type: ReplicaSet
+  opsManager:
+    configMapRef:
+      name: my-project
+  credentials: organization-secret
