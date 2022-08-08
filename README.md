@@ -153,13 +153,53 @@ spec:
 
 ## Deploy a MongoDB Replica Set
 
-### Create a Project
+### Create a Project for the Organization
 
-### Generate config-map.yaml and secret.yaml from UI
+### Generate config-map.yaml and secret.yaml from Ops Manager UI
 
+```
+apiVersion: v1
+kind: Secret
+metadata:
+  name: organization-secret
+  namespace: mongodb
+stringData:
+  user: qbubuuht
+  publicApiKey: 67f82ac4-bd34-49fb-9110-27f8e25964c2
+```
+```
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-project
+  namespace: mongodb
+data:
+  baseUrl: http://ops-manager-svc.mongodb.svc.cluster.local:8080
+
+  # Optional Parameters
+  # projectName: My Ops/Cloud Manager Project
+
+  orgId: 62f0cfaddbefce07af41f8f9
+```
     kubectl apply -f secret.yaml -f config-map.yaml
 
 ### Create replica-set.yaml and copy content
+
+```
+apiVersion: mongodb.com/v1
+kind: MongoDB
+metadata:
+  name: my-project-cluster
+  namespace: mongodb
+spec:
+  members: 3
+  version: "5.0.5-ent"
+  type: ReplicaSet
+  opsManager:
+    configMapRef:
+      name: my-project
+  credentials: organization-secret
+```
 
     touch replica-set.yaml  
     vi replica-set.yaml
