@@ -1,0 +1,13 @@
+apiVersion: mongodb.com/v1
+kind: MongoDB
+metadata:
+  name: my-project
+  namespace: mongodb
+spec:
+  members: 3
+  version: "5.0.5-ent"
+  type: ReplicaSet
+  opsManager:
+    configMapRef:
+      name: my-project
+  credentials: organization-secret
