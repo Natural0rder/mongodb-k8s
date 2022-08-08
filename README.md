@@ -105,5 +105,12 @@ Create Ops Manager Kubernetes Secret (to be used for sign-in to the Ops Manager 
 
     kubectl create secret generic ops-manager-admin-secret --from-literal=Username="nicolas.benhamou@mongodb.com"  --from-literal=Password="Hercules.34" --from-literal=FirstName="nicolas" --from-literal=LastName="benhamou" -n mongodb
 
+Create file ops-manager.yaml and copy content
 
+   touch ops-manager.yaml
+   vi ops-manager.yaml
+   
+Deploy Ops Manager Kubernetes Object
+
+    kubectl apply -f ops-manager.yaml
     
