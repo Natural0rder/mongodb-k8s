@@ -158,3 +158,6 @@ Deploy the change
 
     kubectl apply -f replica-set.yaml -n mongodb
 
+6. Connect with mongosh
+
+    mongosh "mongodb://<my-replica-set-0-IP>:27017"
