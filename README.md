@@ -72,14 +72,9 @@ Start Minikube
     sudo apt-get update
     sudo apt-get install helm
     
-Install MongoDB Kubernetes Enterprise Operator
-
-    helm repo add mongodb https://mongodb.github.io/helm-charts
-    helm install enterprise-operator mongodb/enterprise-operator --namespace mongodb --create-namespace
-    kubectl config set-context $(kubectl config current-context) --namespace=mongodb
-
 Install mongosh
 
+    wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
     echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
     sudo apt-get update
     sudo apt-get install -y mongodb-mongosh
@@ -95,3 +90,9 @@ Open another terminal an create SSH tunnel
 Browse from your local machine
 
     http://127.0.0.1:8081/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/error?namespace=_all
+    
+2. Deploy MongoDB Kubernetes Enterprise Operator
+
+    helm repo add mongodb https://mongodb.github.io/helm-charts
+    helm install enterprise-operator mongodb/enterprise-operator --namespace mongodb --create-namespace
+    kubectl config set-context $(kubectl config current-context) --namespace=mongodb
