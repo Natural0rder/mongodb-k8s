@@ -108,7 +108,8 @@ Edit the associated Security Group to allow all inbound traffic to ease the exer
 
 ### Create file ops-manager.yaml and copy content
 
-> apiVersion: mongodb.com/v1
+```
+apiVersion: mongodb.com/v1
 kind: MongoDBOpsManager
 metadata:
  name: ops-manager
@@ -122,6 +123,7 @@ spec:
  applicationDatabase:
   members: 3
   version: "5.0.5-ent"
+```
 
     touch ops-manager.yaml
     vi ops-manager.yaml
