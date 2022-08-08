@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-project
+  namespace: mongodb
+data:
+  baseUrl: http://ops-manager-svc.mongodb.svc.cluster.local:8080
+
+  # Optional Parameters
+  # projectName: My Ops/Cloud Manager Project
+
+  orgId: 62f0cfaddbefce07af41f8f9
+
