@@ -128,8 +128,22 @@ Get and browse Ops Manager portal
 
 Create a new Organization : [My Org. Name]
 
-Create an API Key for the new Organization with an Organization Owner role (save private and public keys)
+Create an API Key for the new Organization:
+    Organization Owner role (save private and public keys)
+    Add K8S operator POD IP in the white list
 
 4. Deploy a MongoDB Replica Set
 
-Create a secret 
+Create a Project
+Generate config-map.yaml and secret.yaml from UI
+
+    kubectl apply -f secret.yaml -f config-map.yaml
+
+Create replica-set.yaml and copy content
+
+    touch replica-set.yaml  
+    vi replica-set.yaml
+
+Deploy the replica set
+
+    kubectl apply -f replica-set.yaml -n mongodb
