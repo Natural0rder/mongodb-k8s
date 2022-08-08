@@ -160,4 +160,6 @@ Deploy the change
 
 6. Connect with mongosh
 
+Get the primary node POD IP
+
     mongosh "mongodb://<my-replica-set-0-IP>:27017"
