@@ -101,8 +101,9 @@ Install with HELM
  
  3. Deploy Ops Manager
 
-Create Ops Manager secret (to be used for sign-in)
+Create Ops Manager Kubernetes Secret (to be used for sign-in to the Ops Manager web portal)
 
     kubectl create secret generic ops-manager-admin-secret --from-literal=Username="nicolas.benhamou@mongodb.com"  --from-literal=Password="Hercules.34" --from-literal=FirstName="nicolas" --from-literal=LastName="benhamou" -n mongodb
-    
+
+
     
