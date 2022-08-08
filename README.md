@@ -129,3 +129,7 @@ Get and browse Ops Manager portal
 Create a new Organization : [My Org. Name]
 
 Create an API Key for the new Organization with an Organization Owner role (save private and public keys)
+
+4. Deploy a MongoDB Replica Set
+
+Create a secret 
