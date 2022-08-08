@@ -125,3 +125,7 @@ Get and browse Ops Manager portal
     ops-manager-svc-ext             NodePort    10.105.35.24    <none>        8080:31384/TCP,25999:31692/TCP   17m
     
     => http://[ec2 public ip]:31384
+
+Create a new Organization : <My Org. Name>
+
+Create an API Key for the new Organization with an Organization Owner role (save private and public keys)
