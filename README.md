@@ -118,3 +118,10 @@ Monitor provisioning
 
     kubectl get om -n mongodb
     kubectl get om -o yaml -w
+    
+Get and browse Ops Manager portal
+
+    kubectl get svc
+    ops-manager-svc-ext             NodePort    10.105.35.24    <none>        8080:31384/TCP,25999:31692/TCP   17m
+    
+    => http://[ec2 public ip]:31384
