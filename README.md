@@ -1,6 +1,7 @@
 # mongodb-k8s
 How to deploy a MongoDB cluster and Ops Manager on Kubernetes leveraging Minikube, MongoDB Kubernetes Operator, Helm and a single AWS EC2 instance.
 
+https://www.mongodb.com/docs/kubernetes-operator/master/kind-quick-start/
 
 ## Prerequisites
 
