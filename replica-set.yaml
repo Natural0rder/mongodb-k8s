@@ -1,7 +1,7 @@
 apiVersion: mongodb.com/v1
 kind: MongoDB
 metadata:
-  name: my-project
+  name: my-project-cluster
   namespace: mongodb
 spec:
   members: 3
