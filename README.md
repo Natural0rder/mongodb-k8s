@@ -25,7 +25,7 @@ Install docker
     
 Install Minikube
 
-    curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/. 
+    curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
     minikube version
     
  Install conntrack
@@ -63,3 +63,35 @@ Start Minikube
     sudo -i
     minikube start --vm-driver=none
     minikube status
+    
+ Install HELM
+ 
+    curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
+    sudo apt-get install apt-transport-https --yes
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+    sudo apt-get update
+    sudo apt-get install helm
+    
+Install MongoDB Kubernetes Enterprise Operator
+
+    helm repo add mongodb https://mongodb.github.io/helm-charts
+    helm install enterprise-operator mongodb/enterprise-operator --namespace mongodb --create-namespace
+    kubectl config set-context $(kubectl config current-context) --namespace=mongodb
+
+Install mongosh
+
+    echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+    sudo apt-get update
+    sudo apt-get install -y mongodb-mongosh
+
+Start Kubernetes Dashboard
+
+    minikube dashboard --url
+
+Open another terminal an create SSH tunnel
+
+    ssh -i [private key.pem] -L [local port]:localhost:[remote port of minikube dashboard] ubuntu@[public ip]
+    
+Browse from your local machine
+
+    http://127.0.0.1:8081/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/error?namespace=_all
