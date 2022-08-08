@@ -98,3 +98,11 @@ Install with HELM
     helm repo add mongodb https://mongodb.github.io/helm-charts
     helm install enterprise-operator mongodb/enterprise-operator --namespace mongodb --create-namespace
     kubectl config set-context $(kubectl config current-context) --namespace=mongodb
+ 
+ 3. Deploy Ops Manager
+
+Create Ops Manager secret (to be used for sign-in)
+
+    kubectl create secret generic ops-manager-admin-secret --from-literal=Username="[username@someplace.com]"  --from-literal=Password="[password]" --from-literal=FirstName="[firstname]" --from-literal=LastName="[lastname]" -n mongodb
+    
+    
