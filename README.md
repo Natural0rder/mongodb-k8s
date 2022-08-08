@@ -126,6 +126,6 @@ Get and browse Ops Manager portal
     
     => http://[ec2 public ip]:31384
 
-Create a new Organization : <My Org. Name>
+Create a new Organization : [My Org. Name]
 
 Create an API Key for the new Organization with an Organization Owner role (save private and public keys)
