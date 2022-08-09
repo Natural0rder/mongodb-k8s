@@ -209,6 +209,8 @@ spec:
 ### Deploy the replica set
 
     kubectl apply -f replica-set.yaml -n mongodb
+    kubectl get mdb -n mongodb -w
+    kubectl get mdb -o yaml -w
     
 ## Apply an upgrade
 
