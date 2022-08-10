@@ -13,7 +13,7 @@ Edit the associated Security Group to allow all inbound traffic to ease the exer
 
 ### Connect to instance with SSH
 
-    ssh -i "nicolas.benhamou.pe.pem" ubuntu@ec2-XX-XXX-XXX-XXX.eu-west-3.compute.amazonaws.com
+    ssh -i "<pem-file>.pem" ubuntu@ec2-XX-XXX-XXX-XXX.eu-west-3.compute.amazonaws.com
 
 ### Install kubectl
 
@@ -88,7 +88,7 @@ Edit the associated Security Group to allow all inbound traffic to ease the exer
 
 ### Open another terminal an create SSH tunnel
 
-    ssh -i "nicolas.benhamou.pe.pem" -L 8081:localhost:[remote port of minikube dashboard] ubuntu@[ec2 public ip]
+    ssh -i "<pem-file>.pem" -L 8081:localhost:[remote port of minikube dashboard] ubuntu@[ec2 public ip]
     
 ### Browse from your local machine
 
@@ -106,7 +106,7 @@ Edit the associated Security Group to allow all inbound traffic to ease the exer
 
 ### Create Ops Manager Kubernetes Secret (to be used for sign-in to the Ops Manager web portal)
 
-    kubectl create secret generic ops-manager-admin-secret --from-literal=Username="nicolas.benhamou@mongodb.com"  --from-literal=Password="Hercules.34" --from-literal=FirstName="nicolas" --from-literal=LastName="benhamou" -n mongodb
+    kubectl create secret generic ops-manager-admin-secret --from-literal=Username="<email-for-login>"  --from-literal=Password="<complex-password>" --from-literal=FirstName="firstname" --from-literal=LastName="lastname" -n mongodb
 
 ### Create file ops-manager.yaml and copy content
 
@@ -144,7 +144,8 @@ spec:
     kubectl get svc
     ops-manager-svc-ext             NodePort    10.105.35.24    <none>        8080:31384/TCP,25999:31692/TCP   17m
     
-    => http://[ec2 public ip]:31384
+    
+    => Report NodePort to access web portal: http://[ec2 public ip]:31384
 
 ### Create a new Organization : [My Org. Name]
 
@@ -166,8 +167,8 @@ metadata:
   name: organization-secret
   namespace: mongodb
 stringData:
-  user: qbubuuht
-  publicApiKey: 67f82ac4-bd34-49fb-9110-27f8e25964c2
+  user: <privateKey>
+  publicApiKey: <publicKey>
 ```
 ```
 apiVersion: v1
@@ -179,9 +180,9 @@ data:
   baseUrl: http://ops-manager-svc.mongodb.svc.cluster.local:8080
 
   # Optional Parameters
-  # projectName: My Ops/Cloud Manager Project
+  projectName: <projectName>
 
-  orgId: 62f0cfaddbefce07af41f8f9
+  orgId: <orgId>
 ```
     kubectl apply -f secret.yaml -f config-map.yaml
 
