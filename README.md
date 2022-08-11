@@ -162,7 +162,13 @@ spec:
     
 <img width="458" alt="Screenshot 2022-08-11 at 10 55 14" src="https://user-images.githubusercontent.com/102281652/184099026-cd954e7e-e294-43e7-bad8-59bb914136e6.png">
 
-### Create a new Organization : [My Org. Name]
+- Fill the Ops Manager admin form and browse the ops-manager-db organization to check the AppDB
+
+<img width="1712" alt="Screenshot 2022-08-11 at 11 03 04" src="https://user-images.githubusercontent.com/102281652/184099992-b7077092-84cf-4bcb-add4-9b12a6d9dbdf.png">
+
+### Create a new Organization
+
+Fill the Ops Manager admin form
 
 ### Create an API Key for the new Organization
 
