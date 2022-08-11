@@ -267,8 +267,12 @@ spec:
 
     kubectl apply -f replica-set.yaml -n mongodb
 
-## Connect with mongosh
+<img width="605" alt="Screenshot 2022-08-11 at 11 35 00" src="https://user-images.githubusercontent.com/102281652/184105383-a2ed855c-e430-4d82-b99b-6196e455eb63.png">
 
-### Get the primary node POD IP
+## Connect an play with mongosh
 
-    mongosh "mongodb://<my-replica-set-0-IP>:27017"
+    mongosh "mongodb://<Primary-Node-POD-IP>:27017"
+
+<img width="596" alt="Screenshot 2022-08-11 at 11 39 59" src="https://user-images.githubusercontent.com/102281652/184106186-3976188d-51dd-43ae-a56d-2072bdc5ba8e.png">
+
+<img width="854" alt="Screenshot 2022-08-11 at 11 40 44" src="https://user-images.githubusercontent.com/102281652/184106304-641927de-ee2d-4f8f-92ba-b01a4793c238.png">
