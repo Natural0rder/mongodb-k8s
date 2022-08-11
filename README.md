@@ -7,8 +7,7 @@ How to deploy a MongoDB cluster and Ops Manager on Kubernetes leveraging Minikub
 
 ## Prerequisites
 
-Launch a AWS EC2 t3.xlarge instance on Ubuntu 22.04 with a 30GB root volume.
-
+Launch a AWS EC2 t3.xlarge instance on Ubuntu Server 22.04 LTS with a 30GB root volume.
 Edit the associated Security Group to allow all inbound traffic to ease the exercise.
 
 ### Connect to instance with SSH
