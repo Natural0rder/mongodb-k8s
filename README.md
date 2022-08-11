@@ -146,6 +146,8 @@ spec:
     kubectl get om -n mongodb
     kubectl get om -o yaml -w
     
+<img width="731" alt="Screenshot 2022-08-11 at 10 44 34" src="https://user-images.githubusercontent.com/102281652/184096683-519b16fd-ef8d-4bf9-9e95-e08d298308d6.png">
+    
 ### Get and browse Ops Manager portal
 
     kubectl get svc
