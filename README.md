@@ -228,7 +228,7 @@ data:
 apiVersion: mongodb.com/v1
 kind: MongoDB
 metadata:
-  name: my-project-cluster
+  name: my-cluster
   namespace: mongodb
 spec:
   members: 3
@@ -248,6 +248,14 @@ spec:
     kubectl apply -f replica-set.yaml -n mongodb
     kubectl get mdb -n mongodb -w
     kubectl get mdb -o yaml -w
+    
+- Check the provisioning
+
+<img width="390" alt="Screenshot 2022-08-11 at 11 29 31" src="https://user-images.githubusercontent.com/102281652/184104385-756bca59-706b-44b1-ae53-ecaf26bf2ed1.png">
+
+- Check at Ops Manager level
+
+<img width="1467" alt="Screenshot 2022-08-11 at 11 30 11" src="https://user-images.githubusercontent.com/102281652/184104506-22f5db8a-3d0c-4f26-b42b-3ab09294d733.png">
     
 ## Apply an upgrade
 
