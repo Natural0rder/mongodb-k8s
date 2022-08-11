@@ -88,6 +88,8 @@ Edit the associated Security Group to allow all inbound traffic to ease the exer
 ### Start Kubernetes Dashboard
 
     minikube dashboard --url
+    
+<img width="742" alt="Screenshot 2022-08-11 at 10 24 16" src="https://user-images.githubusercontent.com/102281652/184093755-526f55d2-f6a6-4124-97be-456bd666aa9b.png">
 
 ### Open another terminal an create SSH tunnel
 
@@ -96,6 +98,8 @@ Edit the associated Security Group to allow all inbound traffic to ease the exer
 ### Browse from your local machine
 
     http://127.0.0.1:8081/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/error?namespace=_all
+    
+<img width="1708" alt="Screenshot 2022-08-11 at 10 26 30" src="https://user-images.githubusercontent.com/102281652/184093793-1cefb124-9f76-40a7-91d7-9bf17b45905c.png">
     
 ## Deploy MongoDB Kubernetes Enterprise Operator
 
