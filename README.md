@@ -184,6 +184,8 @@ spec:
 
 ### Create a Project for the Organization
 
+<img width="694" alt="Screenshot 2022-08-11 at 11 12 49" src="https://user-images.githubusercontent.com/102281652/184102000-eee3a02c-b0bb-4fd7-a56a-b0a915560fb3.png">
+
 ### Generate config-map.yaml and secret.yaml from Ops Manager UI
 
 ```
