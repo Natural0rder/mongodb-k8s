@@ -151,10 +151,16 @@ spec:
 ### Get and browse Ops Manager portal
 
     kubectl get svc
-    ops-manager-svc-ext             NodePort    10.105.35.24    <none>        8080:31384/TCP,25999:31692/TCP   17m
+
+<img width="781" alt="Screenshot 2022-08-11 at 10 46 17" src="https://user-images.githubusercontent.com/102281652/184096971-2cb6f57c-c178-4d79-910b-477a49486110.png">
+  
+- Add the proper inbound traffic rule at Security Group level
+
+<img width="1175" alt="Screenshot 2022-08-11 at 10 54 41" src="https://user-images.githubusercontent.com/102281652/184098962-2a0097c4-db63-49fd-bad0-5ea9ffbb5e6d.png">
+
+- Report exposed port for ops-manager-svc-ext to access web portal (ex: http://[ec2 public ip]:31618)
     
-    
-    => Report NodePort to access web portal: http://[ec2 public ip]:31384
+<img width="458" alt="Screenshot 2022-08-11 at 10 55 14" src="https://user-images.githubusercontent.com/102281652/184099026-cd954e7e-e294-43e7-bad8-59bb914136e6.png">
 
 ### Create a new Organization : [My Org. Name]
 
