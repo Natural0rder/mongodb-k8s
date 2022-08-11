@@ -186,7 +186,15 @@ spec:
 
 <img width="694" alt="Screenshot 2022-08-11 at 11 12 49" src="https://user-images.githubusercontent.com/102281652/184102000-eee3a02c-b0bb-4fd7-a56a-b0a915560fb3.png">
 
-### Generate config-map.yaml and secret.yaml from Ops Manager UI
+### Generate and apply YAML (secret, configMap) from Ops Manager UI
+
+- At Project/Deployment level, hit the Setup Kubernetes button and use the existing API Key
+
+<img width="1149" alt="Screenshot 2022-08-11 at 11 20 50" src="https://user-images.githubusercontent.com/102281652/184102740-476c4b22-084a-4e52-835c-0dec5450f65c.png">
+
+- Generate YAML
+
+<img width="941" alt="Screenshot 2022-08-11 at 11 22 32" src="https://user-images.githubusercontent.com/102281652/184103056-20370deb-7d7c-4788-b010-5f881d1f9fdd.png">
 
 ```
 apiVersion: v1
