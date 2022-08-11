@@ -65,7 +65,11 @@ Edit the associated Security Group to allow all inbound traffic to ease the exer
     sudo -i
     minikube start --vm-driver=none
     minikube status
-    
+
+<img width="856" alt="Screenshot 2022-08-11 at 09 59 16" src="https://user-images.githubusercontent.com/102281652/184089502-bf5e544f-fcb8-4429-8c66-2e8dd8a6fcdc.png">
+
+<img width="286" alt="Screenshot 2022-08-11 at 10 20 34" src="https://user-images.githubusercontent.com/102281652/184092936-77ee1bf9-d6a2-4035-879f-b21512b8e12d.png">
+
 ### Install HELM
  
     curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
