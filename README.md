@@ -168,12 +168,17 @@ spec:
 
 ### Create a new Organization
 
-Fill the Ops Manager admin form
+<img width="699" alt="Screenshot 2022-08-11 at 11 05 40" src="https://user-images.githubusercontent.com/102281652/184100304-0e2de64e-8f2d-4b04-896c-5c286cb67f78.png">
 
 ### Create an API Key for the new Organization
 
-- Organization Owner role (save private and public keys)
-- Add K8S operator POD IP in the white list
+- At Access Manager/Organization level, create a new API Key (role = Organization Owner)
+
+<img width="423" alt="Screenshot 2022-08-11 at 11 07 19" src="https://user-images.githubusercontent.com/102281652/184100708-7a3d316e-a857-4afa-86bf-d07f677c4032.png">
+
+- Save keys and add the Kubernetes Operator POD IP address in the Access List
+
+<img width="812" alt="Screenshot 2022-08-11 at 11 09 46" src="https://user-images.githubusercontent.com/102281652/184100956-e3757bc3-c6b7-4e89-9c76-43dbe14959f8.png">
 
 ## Deploy a MongoDB Replica Set
 
