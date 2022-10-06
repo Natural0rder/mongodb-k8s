@@ -125,7 +125,7 @@ metadata:
  namespace: mongodb
 spec:
  replicas: 1
- version: "5.0.0"
+ version: "6.0.3"
  adminCredentials: ops-manager-admin-secret
  externalConnectivity:
   type: NodePort
