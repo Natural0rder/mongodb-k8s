@@ -118,6 +118,7 @@ Edit the associated Security Group to allow all inbound traffic to ease the exer
 ### Create file ops-manager.yaml and copy content
 
 ```
+cat << END_OF_FILE > ops-manager.yaml
 apiVersion: mongodb.com/v1
 kind: MongoDBOpsManager
 metadata:
@@ -132,10 +133,8 @@ spec:
  applicationDatabase:
   members: 3
   version: "5.0.5-ent"
+END_OF_FILE
 ```
-
-    touch ops-manager.yaml
-    vi ops-manager.yaml
    
 ### Deploy Ops Manager Kubernetes Object
 
@@ -222,9 +221,10 @@ data:
 ```
     kubectl apply -f secret.yaml -f config-map.yaml
 
-### Create replica-set.yaml and copy content
+### Create replica-set.yaml
 
 ```
+cat << END_OF_FILE > replica-set.yaml
 apiVersion: mongodb.com/v1
 kind: MongoDB
 metadata:
@@ -238,10 +238,8 @@ spec:
     configMapRef:
       name: my-project
   credentials: organization-secret
+END_OF_FILE 
 ```
-
-    touch replica-set.yaml  
-    vi replica-set.yaml
 
 ### Deploy the replica set
 
